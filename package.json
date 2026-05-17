@@ -1,0 +1,29 @@
+{
+  "name": "@typegaro/atom-opentui",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "node ./build.mjs",
+    "prepare": "npm run build",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "atom": {
+    "plugins": [
+      "./dist/index.js"
+    ]
+  },
+  "dependencies": {
+    "@opentui/core": "^0.2.0",
+    "@typegaro/atom-plugin": "^0.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.4"
+  }
+}
